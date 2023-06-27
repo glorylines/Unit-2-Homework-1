@@ -1,19 +1,26 @@
-alert("Заполните анкету");
+let firstName = prompt("Ваше имя:");
+let surname = prompt("Ваша фамилия:");
+let fatherName = prompt("Ваше отчество:");
 
-const fullName = prompt("Ваше ФИО:");
-console.log(fullName)
+let fullName = firstName + " " + surname + " " + fatherName;
 
-const age = prompt("Ваш возраст в годах:");
-console.log(age)
+let age = prompt("Ваш возраст в годах:");
 
-const ageInDays = prompt("Ваш возраст в днях:");
-console.log(ageInDays)
+let ageInDays = age * 365;
+let futureAge = +age + 5;
 
-const result = prompt("Через 5 лет вам будет:");
-console.log(result)
+let gender = confirm("Ваш пол - женский?");
+if (gender === true) {
+    gender = "да"
+} else {
+    gender = "нет"
+}
 
-const gender = confirm("Ваш пол - женский?");
-console.log(gender)
+let pension = (age < 55);
+if (pension === true) {
+    pension = "нет"
+} else {
+    pension = "да"
+}
 
-const pension = confirm("Вы на пенсии:");
-console.log(pension)
+alert("Ваше ФИО: " + fullName + "\nВаш возраст в годах: " + age + "\nВаш возраст в днях: " + ageInDays + "\nЧерез 5 лет вам будет: " + futureAge + "\nВаш пол - женский? " + gender + "\nВы на пенсии: " + pension);
